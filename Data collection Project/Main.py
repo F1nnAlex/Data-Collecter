@@ -1,4 +1,5 @@
-from PyQt5.QtWidgets import QApplication, QPushButton, QGridLayout, QLabel, QLineEdit,QHBoxLayout, QVBoxLayout, QTableWidget, QTableWidgetItem, QWidget
+from PyQt5.QtWidgets import (QApplication, QPushButton, QGridLayout, QLabel, QLineEdit,
+                             QHBoxLayout, QVBoxLayout, QTableWidget, QTableWidgetItem, QWidget)
 import sys
 import openpyxl
 
@@ -13,10 +14,11 @@ class Main(QWidget):
         # If hovering over nothing add "Data" tooltip
         self.setToolTip("Data")
 
-        input_lbl = QLabel(self)
-        input_lbl.setText("Give us data...")
+        self.input_lbl = QLabel(self)
+        self.input_lbl.setText("Give us data...")
 
         self.input_box = QLineEdit(self)
+        self.input_value = self.input_box.text()
 
         save_btn = QPushButton()
         save_btn.setText("Save")
@@ -30,7 +32,7 @@ class Main(QWidget):
 
         self.table_widget = QTableWidget()
         layout.addWidget(self.table_widget)
-        Vlayout.addWidget(input_lbl)
+        Vlayout.addWidget(self.input_lbl)
         Vlayout.addWidget(self.input_box)
         Vlayout.addWidget(save_btn)
 
@@ -40,18 +42,20 @@ class Main(QWidget):
         self.load_data()
 
     def on_click(self):
-        self.input_box.clear()
-        self._addRow()
-
-    def _addRow(self):
-        rowCount = self.table_widget.rowCount()
-        self.table_widget.insertRow(rowCount)
+        self.add_row()
         self.load_data()
 
+    def add_row(self):
+        wb = openpyxl.load_workbook("Data.xlsx")
+        sheet = wb.active
+        sheet.append([self.input_box.text(), 1])
+        self.input_box.clear()
+        wb.save("Data.xlsx")
+
     def load_data(self):
-        path = "data.xlsx"
+        path = "Data.xlsx"
         workbook = openpyxl.load_workbook(path)
-        sheet = workbook.active
+        sheet = workbook.worksheets[0]
 
         # Set size of excel sheet
         self.table_widget.setRowCount(sheet.max_row)
@@ -67,6 +71,7 @@ class Main(QWidget):
                 self.table_widget.setItem(row_index,col_index,QTableWidgetItem(str(value)))
                 col_index += 1
             row_index += 1
+
 
 
 if __name__ == "__main__":
