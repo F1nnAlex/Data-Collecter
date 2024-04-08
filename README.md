@@ -6,7 +6,8 @@
 
  
 
- Tehty:  
+ Tehty: 
+ - softa joka tulostaa excelin tiedon taulukkoon.
  - softa johon voi lisätä dataa joka tallentuu exceliin.
  - Softasta voi myös poistaa dataa halutessa joka poistaa rivit suoraan excelistä.
  - tämä dokumentti :)
@@ -20,9 +21,11 @@
 
  - Saada rivin poisto niin että voi valita kuinka monta poistaa.  
 
- - Saada se toimimaan niin että se ei crashaa jollei anna riviä jonka poistaa.  
+ - Saada se toimimaan niin että se ei crashaa jollei anna riviä jonka poistaa.
 
- - Softan ulkonäköä voisi parantaa.  
+ - mahdollisuus poistaa tietty määrä kopioita jos niitä on enemmän, kuin yksi.
+
+ - Softan ulkonäköä voisi parantaa (tinkr).  
 
  
  
