@@ -20,27 +20,15 @@ Data-Collecter Koodiprojektin dokumentointi
 
  Parannuksia / Pitää tehdä : 
 
- 
--Saada rivin poisto niin että voi valita kuinka monta poistaa. (1h)
-
- 
--Saada se toimimaan niin että se ei crashaa jollei anna riviä jonka poistaa. (eta: unknown)
-
- 
--mahdollisuus poistaa tietty määrä kopioita jos niitä on enemmän, kuin yksi. (2h)
-
- 
--Softan ulkonäköä voisi parantaa (tinkr). (1h-5h)
+- Saada rivin poisto niin että voi valita kuinka monta poistaa. (1h)
+- Saada se toimimaan niin että se ei crashaa jollei anna riviä jonka poistaa. (eta: unknown)
+- Mahdollisuus poistaa tietty määrä kopioita jos niitä on enemmän, kuin yksi. (2h)
+- Softan ulkonäköä voisi parantaa (tinkr). (1h-5h)
 
  
  
 
  Ongelmia koodissa / Things to watch out for: 
 
- 
-
- 
--Delete functio on static, jostain syystä ei toimi jos ei ole static so dont touch (seriously).
-
- 
--Jos deleteen ei anna rivi numeroa niin koko juttu crashaa.
+- Delete functio on static, jostain syystä ei toimi jos ei ole static so dont touch (seriously).
+- Jos deleteen ei anna rivi numeroa niin koko juttu crashaa.
