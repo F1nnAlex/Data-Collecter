@@ -6,12 +6,12 @@ Data-Collecter Koodiprojektin dokumentointi
 
  Tehty: 
  
--Käyttöliittymän pohja(30 min)
--Taulukko joka tulostaa excelin (1.5h)
--Taulukon oikealla oleva nappi joka lisää uuden rivin annetulla tekstillä exceliin (2h)
--Muutimme napin tarkistamaan ensin onko teksti jo taulukossa. Jos se on niin lisää yks kappale. Jos ei niin lisää uusi rivi annetulla sanalla(5h)
--Lisäsimme napin joka ottaa yläpuolelta numeron jolla poistetaan rivi taulukosta(4h)
--tämä dokumentti 
+- Käyttöliittymän pohja(30 min)
+- Taulukko joka tulostaa excelin (1.5h)
+- Taulukon oikealla oleva nappi joka lisää uuden rivin annetulla tekstillä exceliin (2h)
+- Muutimme napin tarkistamaan ensin onko teksti jo taulukossa. Jos se on niin lisää yks kappale. Jos ei niin lisää uusi rivi annetulla sanalla(5h)
+- Lisäsimme napin joka ottaa yläpuolelta numeron jolla poistetaan rivi taulukosta(4h)
+- tämä dokumentti 
 
 
  
